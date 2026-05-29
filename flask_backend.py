@@ -91,6 +91,7 @@ def get_parcelle(numero):
     ST_Contains (fonction PostgreSQL) vérifie si le bâtiment se situe dans la parcelle
     COALESCE remplace NULL par 0 si aucun bâtiment dans parcelle
     LEFT JOIN est utilisé ici pour pouvoir garder la parcelle même si il n'y a aucun bâtiment regbl
+    CASE WHEN c'est une condition si et le THEN c'est alors --> on fait ça
     """
     conn = get_conn()
     cur  = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
