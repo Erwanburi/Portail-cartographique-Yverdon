@@ -5,7 +5,7 @@
 
 1. Ouvrir pgAdmin
 2. Créer une nouvelle base de données nommée : yverdon
-3. Clic droit sur la base "yverdon" → Restore...
+3. Clic droit sur la base "yverdon" → Restore... --> prendre le fichier data_base.sql du projet
 4. Vérifier que l'extension PostGIS est activée sur la base :
    Dans pgAdmin → Query Tool sur la base yverdon, exécuter :
 
@@ -16,11 +16,13 @@
 
 1. Ouvrir un terminal (UV) et se placer dans le dossier backend du projet :
 
-      cd chemin.../Projet géoinformatique/projet
+      cd chemin.../projet
 
 2. Installer les dépendances Python :
 
       déjà présente sur UV
+	  
+	  pour conda : pip install "extension nécessaire"
 
 3. Lancer le serveur Flask :
 
@@ -36,7 +38,7 @@
 
 1. Ouvrir un NOUVEAU terminal (pas besoin de UV) et se placer dans le dossier frontend du projet :
 
-     cd chemin.../Projet géoinformatique/projet
+     cd chemin.../projet
 
 2. Installer les dépendances Node.js :
 

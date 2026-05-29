@@ -264,7 +264,7 @@ function addInteraction() {
         alert(
           `Construction autorisée\n\n` +
           `Parcelle : ${result.numero}\n` +
-          `Surface bâtiment : ${area.toFixed(1)} m²\n` +
+          `Surface bâtiment dessiné : ${area.toFixed(1)} m²\n` +
           `Étages : ${etages}\n` +
           `Hauteur estimée : ${result.hauteur} m\n\n` +
           `IOS : ${result.ios} / ${result.ios_max}\n` +
@@ -276,7 +276,7 @@ function addInteraction() {
         alert(
           `Construction impossible\n\n` +
           `Parcelle : ${result.numero}\n` +
-          `Surface bâtiment : ${area.toFixed(1)} m²\n` +
+          `Surface bâtiment dessiné : ${area.toFixed(1)} m²\n` +
           `Étages : ${etages}\n\n` +
           `IOS : ${result.ios} / ${result.ios_max}\n` +
           `IUS : ${result.ius} / ${result.ius_max}`
