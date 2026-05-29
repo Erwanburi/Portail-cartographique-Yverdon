@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Guichet cartographique - Yverdon</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Guichet cartographique - Yverdon</h1>
+  </header>
+
+  <div id="container">
+
+    <aside id="sidebar">
+
+      <h2>Couches</h2>
+      <div id="layerControls"></div>
+
+      <h2>Outil</h2>
+      <label for="type">Mode de dessin :</label>
+      <select id="type">
+        <option value="None">Aucun</option>
+        <option value="Polygon">Bâtiment (polygone)</option>
+      </select>
+      <button id="undo">Annuler dernier point</button>
+
+    </aside>
+
+    <div id="map"></div>
+
+    <div id="popup" class="ol-popup">
+      <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+      <div id="popup-content"></div>
+    </div>
+
+  </div>
+
+  <script type="module" src="main.js"></script>
+
+</body>
+</html>

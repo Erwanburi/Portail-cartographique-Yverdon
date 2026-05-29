@@ -1,0 +1,4 @@
+<!DOCTYPE connections>
+<qgsPgConnections version="1.0">
+    <postgis sslmode="SslPrefer" dontResolveType="false" database="yverdon" name="yverdon_local" geometryColumnsOnly="false" service="" estimatedMetadata="false" allowGeometrylessTables="false" savePassword="false" host="localhost" port="5432" publicOnly="false" saveUsername="false" projectsInDatabase="false"/>
+</qgsPgConnections>
