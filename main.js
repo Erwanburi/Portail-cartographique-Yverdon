@@ -298,12 +298,12 @@ function addInteraction() {
 
 let selectedFeature = null; // de base on a rien sélectionné
 
-map.on("singleclick", async function (dessin) {
+map.on("singleclick", async function (elem) {
   if (isDrawing) return; // si on est en train de dessiner --> isDrawing = True, on n'affiche rien
   // ici le code permet avec le foreachfeature... de récupérer les éléments dans l'endroit où l'on clique.
   // pour éviter de sélectionner autre chose que les parcelles, on ajoute un layerfilter pour uniquement selectionner 1 seule parcelle provenant de vectorlayer_parcelle
   const feature = map.forEachFeatureAtPixel( // on cherche dans le tableau features
-    dessin.pixel, f => f,
+    elem.pixel, f => f,
     { layerFilter: l => l === vectorLayer_parcelle }
   );
   // ce code permet de lorsqu'on clique dans un endroit où il n'y a pas de parcelle, on en enlève la selection précédente et on enlève l'overlay (popup)
@@ -319,7 +319,7 @@ map.on("singleclick", async function (dessin) {
 
   const numero = feature.get('NUMERO'); // on va chercher le numero de parcelle 
   content.innerHTML = `<p>Chargement...</p>`; // affiche chargement dans la popup le temps que l'opération est en cours
-  overlay.setPosition(dessin.coordinate); // pour positionner la popup à l'endroit où on clique
+  overlay.setPosition(elem.coordinate); // pour positionner la popup à l'endroit où on clique
 
   const resp = await fetch(`${API}/parcelles/${numero}`); // on envoie une requête au backend pour récupérer les infos de la parcelle avec le numéro qu'on a (réponse http brut)
   const data = await resp.json(); // renvoie la réponse et transformation en json pour qu'il soit lisible par javascript
